@@ -1,4 +1,4 @@
-using System;
+  using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,20 +10,20 @@ namespace AverageSalary
     {
     static void Main(string[] args)
         {
-            Console.WriteLine("Введлите колличество сотрудников: ");
-            int Workers = Convert.ToInt32(Console.ReadLine());
-            int SalaryWorkers;
-            while (Workers > 0)
+            int[] SalaryList;
+            Console.WriteLine("Введите колличество сотрудников: ");
+            int  NumberOfWorkers = Convert.ToInt32(Console.ReadLine());
+            SalaryList = new int[] {NumberOfWorkers};      
+            for (int i = 1; 4 <= i; i++)
             {
-                Console.WriteLine("Введлите зарплату сотрудника: ");
-                SalaryWorkers = Convert.ToInt32(Console.ReadLine());
-                Workers--;
-            }
-            
+                Console.WriteLine("Введлите зарплату сотрудника {0.d} : ", i);
+                int SalaryOfEachWorker = Convert.ToInt32(Console.ReadLine());
+                SalaryList[i] = SalaryOfEachWorker;
 
-        
-            
-        }        
+            }  
 
-    } 
+            Console.WriteLine(SalaryList);    
+
+        } 
+    }
 }
